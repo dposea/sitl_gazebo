@@ -501,7 +501,7 @@ void GazeboMavlinkInterface::OnUpdate(const common::UpdateInfo&  /*_info*/) {
   math::Vector3& pos_W_I = T_W_I.pos;  // Use the models' world position for vision estimate
 
   // vision position estimate
-  double dt_ev = (current_time - last_ev_time_).Double();
+  /*double dt_ev = (current_time - last_ev_time_).Double();
   if (dt_ev > ev_update_interval_) {
     // update noise parameters
     noise_ev.x = ev_noise_density * sqrt(dt_ev) * randn_(rand_);
@@ -534,7 +534,7 @@ void GazeboMavlinkInterface::OnUpdate(const common::UpdateInfo&  /*_info*/) {
     //send_mavlink_message(&msg_);
 
     last_ev_time_ = current_time;
-  }
+  }*/
   last_time_ = current_time;
 }
 
